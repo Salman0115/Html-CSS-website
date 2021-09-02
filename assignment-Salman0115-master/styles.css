@@ -1,0 +1,336 @@
+/* MOBILE AND GLOBAL STYLES */
+
+/* applies to screens smaller than 500px (first breakpoint) */
+/* and above unless overwritten below */
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  background-color: white;
+}
+h1, h2, p {
+ color: black;
+}
+#slides img{
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+#portfolio img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+#menuToggler {
+  padding-right: 1rem;
+font-size: 3em;
+color: white;
+z-index: 1;
+font-family:fantasy;
+}
+header{
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  background-color: black;
+}
+#top-header{
+height: 60px;
+display: flex;
+justify-content: space-between;
+}
+
+#nav-text{
+  padding: 1rem;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+a{
+  text-decoration: none;
+}
+
+section#home, #introduction, #contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+#portfolio{
+  height: 300vh;
+  background-color: white;
+      padding: 2em;
+}
+
+#introduction{
+  background-color: white;
+  height: 150vh;
+}
+.intro{
+  display: flex;
+  flex-direction: row;
+}
+#introduction h2{
+  text-align: left;
+}
+#home {
+  align-items: center;
+  justify-content: center;
+}
+small{
+  text-decoration: none;
+}
+#home video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+#contact{
+  background-color: white;
+  border-top: solid 1px white;
+  display: flex;
+  flex-direction: column;
+  height: 150vh;
+}
+.overlay{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.7);
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+color: white;
+font-family: 'Odibee Sans', cursive;
+z-index: -1;
+}
+.text{
+padding: 10px 20px;
+  font-size: 3em;
+}
+.o-text{
+  padding: 10px 20px;
+  font-size: 3em;
+  color: white;
+}
+.button{
+  position: absolute;
+  top: 65%;
+  left: 0;
+  padding: 10px 20px;
+  font-size: 30px;
+  margin: 20px;
+  border-radius: 5px;
+color: white;
+border: white solid 3px;
+font-family: 'Odibee Sans', cursive;
+}
+ p{
+  font-size: 20px;
+  text-align: center;
+}
+ h1 {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+h2{
+  text-align: center;
+}
+footer{
+  width: 100%;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid black;
+}
+footer h1{
+  color: white;
+}
+
+.br{
+  width: 80%;
+  border: 2px solid black;
+}
+article{
+  display: flex;
+  margin: 2em 0;
+  align-items: center;
+  flex-direction: column;
+}
+#slides section{
+
+  margin: 5vh auto;
+  background-color: white;
+  min-height: 50vh;
+  text-align: center;
+  overflow: auto;
+  border-radius: 1em;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#slides section.current{
+  display: flex;
+}
+
+#submit{
+  padding: 15px 15px;
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+  width: 150px;
+  margin-left: 5px;
+}
+.box{
+  width: 70%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+input{
+  padding: 14px 20px;
+  border: 3px solid  #7e7e7e;
+  border-radius: 3px;
+  margin: 5px;
+  background-color: white;
+}
+textarea{
+  height: 150px;
+  padding-top: 10px;
+  margin: 5px;
+  border-radius: 3px;
+  background-color: white;
+  border: 3px solid  #7e7e7e;
+}
+select{
+  padding-top: 10px;
+  margin: 5px;
+  border-radius: 3px;
+  background-color: white;
+  border: 3px solid  #7e7e7e;
+}
+nav {
+	position: fixed;
+	width: 100%;
+	height: 40%;
+	top: 70.5px;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+  background-color: rgba(0,0,0,0.9);
+	opacity: 1;
+	transform: translate(100vh);
+	transition: transform 0.4s, opacity 0.6s;
+  z-index: 1;
+}
+
+nav.open {
+	transition: transform 0.4s, opacity 0.2s;
+	transform: none;
+	opacity: 1;
+  border-bottom: black 7px solid;
+}
+
+nav a {
+	font-size: 2em;
+	text-decoration: none;
+	padding: 1rem 0em;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+  color: white;
+	text-align: center;
+}
+#map{
+  height: 50%;
+  width: 70%;
+}
+@media screen and (max-width: 500px) {
+
+body{
+}
+}
+@media screen and (max-width: 380px) {
+  #portfolio{
+    height: 350vh;
+  }
+
+
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  #portfolio{
+    height: 430vh;
+  }
+}
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 500px) {
+
+  /* applies to screens wider than 999px */
+  nav {
+  	position: fixed;
+  	width: 30%;
+  	height: 100%;
+  	top: 70.5px;
+    right: 0;
+  	display: flex;
+  	flex-direction: column;
+    align-items: flex-start;
+  	opacity: 1;
+  	transform: translateX(100vh);
+    visibility: hidden;
+  	transition: transform 0.4s, opacity 0.6s;
+    z-index: 1;
+  }
+  nav.open{
+    visibility: visible;
+  }
+
+  .tiles{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    padding: 7rem;
+  }
+  #portfolio{
+    height: 130vh;
+  }
+ h1, h2, p {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+  }
+  #introduction p{
+    text-align: center;
+
+  }
+  article{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  #contact{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+}
